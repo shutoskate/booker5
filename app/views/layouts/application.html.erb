@@ -10,6 +10,16 @@
   </head>
 
   <body>
+  <header class="header">
+    <div class="title">
+      <%= link_to "you","#", class: "header__right--btn" %>
+      </div>
+    <div class="title2">  
+      <%= link_to "Main-Page", root_path, class: "header__left--btn" %>
+      </div>
+
     <%= yield %>
   </body>
 </html>
+
+
