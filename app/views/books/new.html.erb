@@ -3,7 +3,9 @@
 </div>
 <%= form_with model: @book, class: :form, local: true do |form| %>
   <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
-  <%= form.text_area :content, placeholder: :ブログ本文, class: :form__text %>
+  <%= form.text_field :author, placeholder: :著者, class: :form__title %>
+  <%= form.file_field :image %>
+  <%= form.text_area :kill, placeholder: :内容, class: :kill %>
   <%= form.submit '投稿', class: :form__btn %>
 <% end %>
 

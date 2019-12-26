@@ -1,12 +1,10 @@
 <h1>BOOKER</h1>
 <h2>貴方を射止めた文章<h2>
-<div class="post-killer">  
- <%= link_to "Killer登録", new_book_path, class: "header__left--btn" %>
-</div>
+ <%= link_to "Killer登録", new_book_path, class: "post" %>
 <p>貴方が喰らった文書を登録</p>
-<div class="point2">Killer紹介</div>
-<p>皆のkillerを閲覧</p>
-<div class="point3">Killer検索</div>
+<%= link_to "Killer検索","#", class: "search" %>
 <p>お気に入りを探そう</p>
-<div class="point4">Killerコレクション</div>
+<%= link_to "Killerコレクション","#", class: "collection" %>
 <p>貴方だけのkillerを集めよう</p>
+<%= link_to "Killer紹介", books_path, class: "show-book" %>
+<p>皆のkillerを閲覧</p>
