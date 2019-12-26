@@ -1,10 +1,11 @@
 	<h1>皆のkiller</h1>
-<% @book.each do |book| %>　
+<% @book.each do |book| %>
 <div class="image_area" >
-  <%= image_tag "#{book.image}" %>
-  　<div class="title">
-    　TITLE: <%= book.title %>
-    　  <div class="author">
-      　　著者: <%= book.author %>
+  <%= link_to image_tag("#{book.image}"), book_path(book.id) %>
+    <div class="title">
+    TITLE: <%= book.title %>
+    <div class="author">
+    著者: <%= book.author %>
 </div>   
 <% end %>
+

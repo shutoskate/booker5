@@ -1,1 +1,11 @@
-<div class="content_post" style="background-image: url(<%= book.image %>);">
+	<h1>皆のkiller</h1>
+<div class="image_area" >
+  <%= image_tag "#{@book.image}" %>
+    <div class="title"></div>
+    TITLE: <%= @book.title %>
+    <div class="author"></div>
+    著者: <%= @book.author %>
+    <div class="kill"></div>
+    <%= @book.kill %>
+</div>   
+
