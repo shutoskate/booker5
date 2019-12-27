@@ -22,14 +22,16 @@ class BooksController < ApplicationController
 
 
   def show_book
-    @book = Book.all#Book modelからだよ
+    @book = Book.includes(:user)#Book modelからだよ
   end
 
 
 
   private
+
   def book_params
-    params.require(:book).permit(:title, :kill, :author, :image) #Web画面上から内部へ流れてきた値を安全に受け取る仕組み
+    params.require(:book).permit(:title, :kill, :author, :image).merge(user_id: current_user.id) 
+    #Web画面上から内部へ流れてきた値を安全に受け取る仕組み
   end
 
 
