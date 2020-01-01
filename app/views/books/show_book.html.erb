@@ -7,7 +7,16 @@
     <div class="author"></div>
     著者: <%= book.author %>
     <div class="nickname"></div>
-    <%= book.user.nickname %> 
+    <% if user_signed_in? %>
+    <% if book.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
+        <p><span>お気に入り解除: </span><%=link_to book.favorites.count, book_favorites_path(book.id), method: :delete %></p>
+    <% else %>
+        <p><span>お気に入り登録: </span><%=link_to book.favorites.count, book_favorites_path(book.id), method: :post %></p>
+    <% end %>
+  <% else %>
+    <p><span>お気に入り数: </span><%= book.favorites.count %></p>
+  <% end %>
+
 </div>   
 <% end %>
 

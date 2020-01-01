@@ -1,4 +1,4 @@
-	<h1>皆のkiller</h1>
+	<h1>killer</h1>
 <div class="image_area" >
   <%= image_tag "#{@book.image}" %>
     <div class="title"></div>
@@ -7,5 +7,9 @@
     著者: <%= @book.author %>
     <div class="kill"></div>
     <%= @book.kill %>
+    <div class="nickname"></div>
+    <%= @book.user.nickname %>
+    
 </div>   
+
 
