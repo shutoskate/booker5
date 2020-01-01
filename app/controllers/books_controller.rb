@@ -1,14 +1,17 @@
 class BooksController < ApplicationController
+  before_action :authenticate_user!, except: [:index]  # deviseのメソッドで「ログインしていないユーザーをログイン画面に送る」メソッド
+
 
   def index
   end
 
   def new
-    @book = Book.new #@booksはビューへ渡す為
+    @book = Book.new #@bookはビューへ渡す為
   end
 
   def create
     @book = Book.create(book_params)
+    @book.user_id = current_user.id # user_idの情報はフォームからはきていないので、deviseのメソッドを使って「ログインしている自分のid」を代入
     redirect_to root_path
   end
 
@@ -24,6 +27,7 @@ class BooksController < ApplicationController
   def show_book
     @book = Book.includes(:user)#Book modelからだよ
   end
+
 
 
 

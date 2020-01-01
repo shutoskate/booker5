@@ -4,7 +4,7 @@
 <p>貴方が喰らった文書を登録</p>
 <%= link_to "Killer検索","#", class: "search" %>
 <p>お気に入りを探そう</p>
-<%= link_to "Killerコレクション","#", class: "collection" %>
+<%= link_to "Killerコレクション", user_path(current_user.id), class: "collection" %>
 <p>貴方だけのkillerを集めよう</p>
 <%= link_to "Killer紹介", books_path, class: "show-book" %>
 <p>皆のkillerを閲覧</p>
