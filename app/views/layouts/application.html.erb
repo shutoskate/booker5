@@ -12,21 +12,23 @@
   <body>
   <header class="header">
     <div class="title">
+      <div class="name">
         <% if user_signed_in? %>
-          <%= link_to "新規投稿", new_book_path, class: "header__right--btn" %>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
-          <%= "ようこそ" %>    
-          <%= current_user.nickname%>
+                  <%= "Welcome" %>    
+        <%= link_to current_user.nickname, users_path, class: "name" %>
+      </div>  
+          <%= link_to "NewPost", new_book_path, class: "right--btn" %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "right--btn" %>
         <% else %>
-          <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
-          <%= link_to "新規登録", new_user_registration_path, class: "header__right--btn" %>
-        <% end %>
-      </div>
-    <div class="title2">  
-      <%= link_to "トップページ", root_path, class: "header__left--btn" %>
-      </div>
+          <%= link_to "Login", new_user_session_path, class: "right--btn" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "right--btn" %>
+        <% end %> 
+      <%= link_to "Top Page", root_path, class: "right--btn" %>
+      </div>  
+    </header>  
     <%= yield %>
   </body>
 </html>
+
 
 

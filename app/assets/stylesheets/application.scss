@@ -1,1 +1,149 @@
-@import "font-awesome";
+@import "./users";
+@import "./book";
+@import "./gridLayout";
+@import "./hatena";
+@import "font-awesome-sprockets";
+@import "./font-awesome";
+body {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  position: relative;
+  color: #333;
+  display: inline-block;
+  margin: 90px 0;
+  text-shadow: 0 0 2px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Comic Sans MS;
+  font-size: 100px;
+}
+h1:before {
+  content: "";
+  position: absolute;
+  background: red;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+
+.header{
+  width: 100%;    /*横幅の指定*/
+  //border-top: 5px solid red;   /*上部の線の色を指定*/
+  //border-bottom: 5px solid red;    /*下部の線の色を指定*/
+  margin-bottom: 5px; /**/
+  background-color: white;
+  margin: 1em 0;
+  padding: 1em;
+  background-color:white;
+  border-radius: 10px;
+}
+.title{
+  width: 60%; /*横幅の指定*/
+  margin-left: 20%;   /*左端から20%右側に動かす*/
+  //line-height: 2px;
+  margin-top: 22px;
+  font-family: Comic Sans MS;
+  font-size: 45px;
+}
+.right--btn{
+  text-decoration: none ;
+  //border-left: 1px solid orange;  /*線を描く*/
+  text-align: center; /*文字を中央に*/
+  //float: left;    /*左から並べる*/
+  font-size: 20px;
+  font-family: Comic Sans MS;
+  color: black;
+  font-size: 35px;
+  
+}
+
+.books{
+  margin: 10px 20px 20px 10px;
+  display: flex;
+  font-family: Comic Sans MS;
+  width: 90%;
+  min-width: 640px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -o-box;
+  display: -ms-box;
+  box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-box-pack: justify; 
+
+}
+.image_area{
+  text-decoration: none ;
+  font-family: Comic Sans MS;
+  width: 180px;
+  height: 200px;
+  display: block;
+
+}
+.name{
+  text-decoration: none ;
+  color:black;
+}
+
+.text-focus-in{
+  font-size: 50px;
+  margin: 50px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px silver;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.zen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__btn{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.area_2{
+  text-align: center;
+  position: relative;
+  /* width: 90%; */
+  margin: 40px 3%;
+}
+
+.side{
+  background-color: aquamarine;
+  display: flex;
+}
+

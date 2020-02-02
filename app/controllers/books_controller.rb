@@ -3,6 +3,7 @@ class BooksController < ApplicationController
 
 
   def index
+    
   end
 
   def new
@@ -20,12 +21,12 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
+    @book = Book.find(Favorite.group(:book_id).order('count(book_id) desc').limit(3).pluck(:book_id))
   end
 
 
   def show_book
-    @book = Book.includes(:user)#Book modelからだよ
+    @book = Book.includes(:user)
   end
 
 

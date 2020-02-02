@@ -1,0 +1,22 @@
+	<h1>Ranking</h1>
+<div class="wrapper">
+    <body>
+      <div class="ranking" >
+       <div class="ranling_no">
+         <div class="ranking_no_1" ></div>
+         <div class="ranking_no_2"></div>
+         <div class="ranking_no_3"></div>
+       </div> 
+       <div class="ranking_book">
+          <% @book.each do |book| %>
+              <div class="ranking_books">
+                  <%= link_to image_tag("#{book.image}"), book_path(book.id), class: "gazou" %>
+                    <div class="nonono" >
+                      <%= book.title %> 
+                    </div> 
+              </div>
+          <% end %>
+       </div>
+      </div> 
+    </body>
+</div>

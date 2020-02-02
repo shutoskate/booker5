@@ -1,10 +1,28 @@
+<% if user_signed_in? && current_user.id %>
 <h1>BOOKER</h1>
-<h2>貴方を射止めた文章<h2>
- <%= link_to "Killer登録", new_book_path, class: "post" %>
-<p>貴方が喰らった文書を登録</p>
-<%= link_to "Killer検索","#", class: "search" %>
-<p>お気に入りを探そう</p>
-<%= link_to "Killerコレクション", user_path(current_user.id), class: "collection" %>
-<p>貴方だけのkillerを集めよう</p>
-<%= link_to "Killer紹介", books_path, class: "show-book" %>
-<p>皆のkillerを閲覧</p>
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8"/>
+</head>
+
+<body>
+    <div class="content">
+        <div class="image">
+            <%= image_tag 'ダウンロード (2).png', :size =>'200x200' %>
+            <%= link_to "List", books_path, class: "box11" %>
+        </div>
+        <div class="image">
+            <%= image_tag 'saw.png', :size =>'200x200' %>
+            <%= link_to "Ranking", edit_book_path(:id), class: "box11" %>
+        </div>
+        <div class="image">
+            <%= image_tag 'bbs.png', :size =>'200x200' %>
+            <%= link_to "Collection", user_path(current_user.id), class: "box11" %>
+        </div>
+    </div>
+    <div class="content">
+    </div>    
+</body>
+<% end %>
+

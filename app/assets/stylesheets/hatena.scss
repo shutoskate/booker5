@@ -1,0 +1,60 @@
+.area{
+  text-align: center; //中央に配置
+  position: relative;
+	width: 90%;
+	margin: 40px 3%;
+}
+.form__title{
+  font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+
+.label{
+  cursor: pointer;
+	font-size:5em;
+	.imagearea{
+		//display: none;
+	} 
+ }
+
+.form__btn{
+	cursor: pointer;
+	font-size:10em;
+
+}
+
+
+
+
+
+
+.field{
+	text-align: center;
+	width: 95%;
+	margin: 40px 
+}
+
+.lock-bottom{
+ text-align: center;
+	width: 95%;
+	margin: 40px 
+}
+.actions{
+	text-align: center;
+	width: 95%;
+	margin: 40px
+}
+
+.forget{
+	text-decoration: none;
+	text-align: center;
+	width: 95%;
+	margin: 40px
+}

@@ -1,0 +1,10 @@
+<h1>My Page</h1>
+  <% @books.each do |book| %>
+  <div class="books">
+    <div class="list" >
+       <%= link_to image_tag("#{book.image}"), book_path(book.id) %>
+       <p><span>Title: </span><%=link_to book.title, book_path(book.id) %></p>
+     </div>   
+  <% end %>
+  </div>     
+

@@ -1,22 +1,24 @@
-	<h1>皆のkiller</h1>
-<% @book.each do |book| %>
-<div class="image_area" >
-  <%= link_to image_tag("#{book.image}"), book_path(book.id) %>
-    <div class="title"></div>
-    TITLE: <%= book.title %>
-    <div class="author"></div>
-    著者: <%= book.author %>
-    <div class="nickname"></div>
-    <% if user_signed_in? %>
-    <% if book.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
-        <p><span>お気に入り解除: </span><%=link_to book.favorites.count, book_favorites_path(book.id), method: :delete %></p>
-    <% else %>
-        <p><span>お気に入り登録: </span><%=link_to book.favorites.count, book_favorites_path(book.id), method: :post %></p>
-    <% end %>
-  <% else %>
-    <p><span>お気に入り数: </span><%= book.favorites.count %></p>
-  <% end %>
-
-</div>   
-<% end %>
-
+	<h1>Member's Book</h1>
+<body>
+  <div class="books">
+     <% @book.each do |book| %>
+       <div class="image_area" >
+         <div class="wrap">
+             <div class="sliding"></div>
+              <%= link_to image_tag("#{book.image}"), book_path(book.id) %>
+              <div class="title"></div>
+              Title: <%= book.title %>
+              <div class="author"></div>
+              Writer: <%= book.author %>
+              <% if book.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
+                  <p><span>Cancel: </span><%=link_to book.favorites.count, book_favorites_path(book.id), method: :delete %></p>
+              <% else %>
+                  <p><span>Like: </span><%=link_to book.favorites.count, book_favorites_path(book.id), method: :post %></p>
+              <% end %>
+              <% else %>
+              <p><span>Like counts </span><%= book.favorites.count %></p>
+            </div>
+       </div>   
+     <% end %>
+  </div>            
+</body>

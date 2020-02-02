@@ -1,24 +1,16 @@
-# README
+Bookerについて
+：Bookerは本のレビューアプリです。本の紹介や解説ではなく、読者（ユーザー）が投稿した本の記述内で気に入ったり、心打たれた文を紹介します。
+何ができるのか
+：ユーザー登録が可能です。登録後、投稿が可能です
+：他のユーザーが気に入った本を一覧にして閲覧化してあります
+：自身が気に入った他のユーザーの投稿をお気に入り登録できます、またそれらを一覧にして閲覧できます  
+：お気に入り数が多い投稿が３位まで表示されます
+今後の実施予定
+：リスト表示ループで表示
+：メインページにランキング上位３つを表示
+：投稿後のフラッシュアクションの実施
+：気に入った一文をアニメーションで表示
+：メインページに検索機能を実施
+：投稿の編集、削除を実施
+：気に入った文を複数投稿可能に
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

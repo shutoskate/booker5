@@ -1,0 +1,35 @@
+/* edit ================================ */
+.ranking{
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  //justify-content: center;
+}
+
+.ranking_no_1{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+  background: url(111.png);
+  background-size: 200px 200px;
+
+}
+.ranking_no_2{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+  background: url(222.png);
+  background-size: 200px 200px;
+}
+.ranking_no_3{
+  width: 200px;
+  height: 200px;
+  margin-bottom: 30px;
+  background: url(333.png);
+  background-size: 200px 200px;
+}
+
+.ranking_book{
+  margin: 10px;
+}

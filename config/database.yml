@@ -52,3 +52,6 @@ production:
   database: booker5_production
   username: booker5
   password: <%= ENV['BOOKER5_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
