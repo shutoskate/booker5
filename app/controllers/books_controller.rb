@@ -28,6 +28,13 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+  def updata
+    book = Book.find(prams[:id])
+    book.updata(book_params)
+    redirect_to book_path(Book.id)
+  end
+
+
 
   def show_book
     @book = Book.includes(:user)
