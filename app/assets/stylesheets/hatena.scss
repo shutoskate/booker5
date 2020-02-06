@@ -7,20 +7,34 @@
 .form__title{
   font: 15px/24px sans-serif;
 	box-sizing: border-box;
-	width: 100%;
+	width: 200px;
+	text-align: center;
 	padding: 0.3em;
 	transition: 0.3s;
 	letter-spacing: 1px;
-	color: #aaaaaa;
+	color: black;
 	border: 1px solid #1b2538;
 	border-radius: 4px;
 }
+.form__titles{
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 500px;
+	text-align: center;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: black;
+	border: 1px solid #1b2538;
+	border-radius: 4px;
+}
+
 
 .label{
   cursor: pointer;
 	font-size:5em;
 	.imagearea{
-		//display: none;
+		display: none;
 	} 
  }
 
@@ -38,7 +52,23 @@
 .field{
 	text-align: center;
 	width: 95%;
-	margin: 40px 
+	margin: 40px;
+}
+#user_password{
+	height: 30px;
+	width: 300px;
+}
+#user_email{
+	height: 30px;
+	width: 300px;
+}
+#user_nickname{
+	height: 30px;
+	width: 300px;
+}
+#user_password_confirmation{
+	height: 30px;
+	width: 300px;
 }
 
 .lock-bottom{

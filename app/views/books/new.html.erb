@@ -14,13 +14,14 @@
             <%= form.text_field :author, placeholder: :著者, class: :form__title %>
           </div>
           <div class="area">
-            <%= form.text_area :kill, placeholder: :文章, class: :form__title %>
+            <%= form.text_area :kill, placeholder: :文章, class: :form__titles %>
           </div>
           <div class="area">
-              <div class="label">
-                <%= fa_icon 'image'%>
-                <%= form.file_field :image, class: "imagearea" %>
-              </div>  
+             <div class="label">
+            <%= form.label :image, class: "label_area" do %>
+              <%= fa_icon 'image'%>
+              <%= form.file_field :image, class: "imagearea" %>
+            <% end %>  
           </div>
           <div class="area">
             <%= form.submit '投稿', class: :form__btn %>
