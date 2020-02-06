@@ -20,8 +20,12 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
-  def edit
+  def rank
     @book = Book.find(Favorite.group(:book_id).order('count(book_id) desc').limit(3).pluck(:book_id))
+  end
+
+  def edit
+    @book = Book.find(params[:id])
   end
 
 

@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'books', to: 'books#show_book' 
   resources :books do
     resource :favorites, only: [:create, :destroy]
+    member do
+      get 'rank'
+    end
   end
   
 
