@@ -15,6 +15,7 @@ class BooksController < ApplicationController
     @book.user_id = current_user.id # user_idの情報はフォームからはきていないので、deviseのメソッドを使って「ログインしている自分のid」を代入
     redirect_to root_path
   end
+  
 
   def show
     @book = Book.find(params[:id])
